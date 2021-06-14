@@ -1,0 +1,11 @@
+nav {
+  height: 120px;
+  color: #ffffff;
+  background-color: #4056a1;
+  margin: 1.5em;
+  display: flex;
+}
+
+.nav-title {
+  font-family: "Bungee";
+}
