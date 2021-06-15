@@ -1,40 +1,34 @@
-.container {
+.new-tweet {
   background-color: rgb(188, 189, 196);
+  margin-top: 10px;
+  display: flex;
+  padding: 10px;
 }
 
-/* .new-tweet {
-} */
+.tweet-form {
+  width: 100%;
+}
 
-.counter {
-  font-family: "Bungee", sans-serif;
-  font-size: 15pt;
+.tweet-label {
+  color: black;
 }
 
 #tweet-text {
   border: none;
   border-bottom: 3px solid black;
-  display: flex;
   width: 100%;
-}
-
-#above-text {
-  display: flex;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.below-text {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  margin-top: 10px;
+  background-color: transparent;
 }
 
 #tweet-button {
   font-family: "Bungee", sans-serif;
   color: white;
   background-color: #4056a1;
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+  font-size: 15pt;
+  float: right;
 }
