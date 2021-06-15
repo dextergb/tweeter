@@ -19,6 +19,7 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,9 +37,14 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav style="font-family: Bungee">
-      <span>tweeter</span>
-      <i class="fas fa-angle-double-down"></i>
+    <nav>
+      <span class="title">TWEETER</span>
+      <div class="tweet">
+        <span><b>Write</b> a new tweet</span>
+        <span>
+          <i class="fas fa-angle-double-down" style="color: red"></i>
+        </span>
+      </div>
     </nav>
 
     <!-- Page-specific (main) content here -->
