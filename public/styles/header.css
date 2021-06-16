@@ -1,17 +1,19 @@
 header.main-header {
   height: 400px;
-  width: 100%;
   background-color: saddlebrown;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
   overflow: hidden;
 }
 
 .name {
   font-size: 30pt;
   color: white;
+}
+
+.tweet:hover {
+  color: black;
 }

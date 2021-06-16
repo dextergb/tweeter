@@ -8,6 +8,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   top: 0;
+  position: fixed;
+}
+
+body {
+  padding-top: 90px;
+}
+
+.write-tweet:hover {
+  color: black;
 }
 
 .title {
@@ -15,7 +24,7 @@ nav {
   font-size: 35pt;
 }
 
-.tweet {
+.write-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
