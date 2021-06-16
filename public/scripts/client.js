@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
-];
-
 // A page can't be manipulated safely until the document is "ready."
 $(document).ready(function () {
   // Form submission using JQuery
@@ -42,16 +16,33 @@ $(document).ready(function () {
     })
       .done(() => {
         console.log("Posted Successfully");
+        loadTweets();
         $("#tweet-text").val("");
+        $(".counter").replaceWith(
+          `<output name="counter" class="counter" style="color: black" for="tweet-text">140</output>`
+        );
       })
       .fail((error) => console.log("Failed", error));
   });
 
+  // define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page.
+  const loadTweets = function () {
+    $.ajax({
+      method: "GET",
+      url: "http://localhost:8080/tweets",
+    })
+      .done((res) => renderTweets(res))
+      .fail((error) => console.log("Failed", error));
+  };
+
+  loadTweets();
+
   // This function can be responsible for taking in an array of tweet objects and then appending each one to the #tweets-container. In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing the tweet object to it, then using the returned jQuery object by appending it to the #tweets-container section.
 
   const renderTweets = function (tweets) {
+    $(".tweet-section").empty();
     for (let tweet in tweets) {
-      $(".container").append(createTweetElement(tweets[tweet]));
+      $(".tweet-section").append(createTweetElement(tweets[tweet]));
     }
   };
 
@@ -78,6 +69,4 @@ $(document).ready(function () {
 
     return $tweet;
   };
-
-  renderTweets(data);
 });
