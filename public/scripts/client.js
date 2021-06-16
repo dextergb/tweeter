@@ -9,6 +9,17 @@ $(document).ready(function () {
   // Form submission using JQuery
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
+    const value = $("#tweet-text").val();
+    console.log("length", value.length);
+
+    // Validation
+    if (value.trim().length > 140) {
+      return alert("Can't be over 140 character");
+    }
+    if (value.trim().length === 0) {
+      return alert("Tweet Can't Be Blank");
+    }
+
     $.ajax({
       method: "POST",
       url: "http://localhost:8080/tweets",

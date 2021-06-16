@@ -8,10 +8,8 @@
 .tweet-section {
   background-color: rgb(231, 232, 236);
   margin-top: 30px;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column-reverse;
-  padding: 10px;
 }
 
 .tweet-container:hover {
