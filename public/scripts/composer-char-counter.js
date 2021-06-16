@@ -1,10 +1,14 @@
 $(document).ready(function () {
   $("#tweet-text").on("input", function () {
-    $(".counter")[0].innerHTML = 140 - this.value.length;
-    if (this.value.length > 140) {
-      $(".counter").css("color", "red");
+    let counter = 140 - this.value.length;
+    if (counter >= 0) {
+      $(".counter").replaceWith(
+        `<output name="counter" class="counter" style="color: black" for="tweet-text">${counter}</output>`
+      );
     } else {
-      $(".counter").css("color", "black");
+      $(".counter").replaceWith(
+        `<output name="counter" class="counter" style="color: red" for="tweet-text">${counter}</output>`
+      );
     }
   });
 });
