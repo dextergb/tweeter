@@ -29,3 +29,25 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+#arrow {
+  color: red;
+  margin-top: 8px;
+  display: inline-block;
+  position: relative;
+  -moz-animation: bounce 1s infinite linear;
+  -o-animation: bounce 1s infinite linear;
+  -webkit-animation: bounce 1s infinite linear;
+  animation: bounce 1s infinite linear;
+}
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
+}
