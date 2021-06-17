@@ -65,7 +65,7 @@ $(document).ready(function () {
     <span id="tweet-name">${tweet.user.name}</span>
     <span id="tweet-handle">${tweet.user.handle}</span>
     </header>
-    <p class="tweet-content">${tweet.content.text}</p>
+    <p class="tweet-content">${escape(tweet.content.text)}</p>
     <footer class="tweet-footer">
       <span>${timeago.format(tweet.created_at)}</span>
       <span>
@@ -77,5 +77,12 @@ $(document).ready(function () {
   </article>`);
 
     return $tweet;
+  };
+
+  // Prevent XSS attacks
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 });
