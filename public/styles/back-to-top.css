@@ -1,0 +1,18 @@
+.back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 20px from the right */
+  border: none;
+  outline: none;
+  background-color: #4056a1; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.back-to-top:hover {
+  background-color: rgb(30, 30, 199);
+}

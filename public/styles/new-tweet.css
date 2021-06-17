@@ -27,10 +27,11 @@
   font-family: "Bungee", sans-serif;
   color: white;
   background-color: #4056a1;
+  cursor: pointer;
 }
 
 #tweet-button:hover {
-  background: blue;
+  background: rgb(30, 30, 199);
 }
 
 .counter {
