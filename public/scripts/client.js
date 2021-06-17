@@ -12,11 +12,25 @@ $(document).ready(function () {
     const value = $("#tweet-text").val();
 
     // Validation
+    $(".error-message").empty();
+
     if (value.trim().length > 140) {
-      return alert("Can't be over 140 character");
+      $(".error-message")
+        .append(
+          '<article class="error-element"><i class="fas fa-exclamation-triangle"></i><span>Too Long! Must Be 140 Characters or Less!</span><i class="fas fa-exclamation-triangle"></i></article>'
+        )
+        .slideDown("slow");
+      return;
     }
     if (value.trim().length === 0) {
-      return alert("Tweet Can't Be Blank");
+      $(".error-message")
+        .append(
+          '<article class="error-element"><i class="fas fa-exclamation-triangle"></i><span>Tweet Cannot Be Empty!</span><i class="fas fa-exclamation-triangle"></i></article>'
+        )
+        .slideDown("slow");
+      return;
+    } else {
+      $(".error-element").remove(".error-element");
     }
 
     $.ajax({
