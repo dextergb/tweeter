@@ -19,7 +19,7 @@ $(document).ready(function () {
         .append(
           '<article class="error-element"><i class="fas fa-exclamation-triangle"></i><span>Too Long! Must Be 140 Characters or Less!</span><i class="fas fa-exclamation-triangle"></i></article>'
         )
-        .slideDown("slow");
+        .slideDown();
       return;
     }
     if (value.trim().length === 0) {
@@ -27,10 +27,10 @@ $(document).ready(function () {
         .append(
           '<article class="error-element"><i class="fas fa-exclamation-triangle"></i><span>Tweet Cannot Be Empty!</span><i class="fas fa-exclamation-triangle"></i></article>'
         )
-        .slideDown("slow");
+        .slideDown();
       return;
     } else {
-      $(".error-element").remove(".error-element");
+      $(".error-message").slideUp(".error-message");
     }
     // Ajax post request
     $.ajax({
@@ -49,7 +49,6 @@ $(document).ready(function () {
       .fail((error) => console.log("Failed", error));
   });
 
-  // define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page.
   const loadTweets = function () {
     $.ajax({
       method: "GET",
@@ -61,16 +60,12 @@ $(document).ready(function () {
 
   loadTweets();
 
-  // This function can be responsible for taking in an array of tweet objects and then appending each one to the #tweets-container. In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing the tweet object to it, then using the returned jQuery object by appending it to the #tweets-container section.
-
   const renderTweets = function (tweets) {
     $(".tweet-section").empty();
     for (let tweet in tweets) {
       $(".tweet-section").append(createTweetElement(tweets[tweet]));
     }
   };
-
-  // define a function createTweetElement that takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet.
 
   const createTweetElement = function (tweet) {
     let $tweet = $(`<article class="tweet-container">
