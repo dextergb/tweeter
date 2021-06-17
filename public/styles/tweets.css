@@ -16,9 +16,20 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-header.tweet-header {
-  display: flex;
-  justify-content: space-between;
+#tweet-avatar {
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+#tweet-name {
+  color: black;
+  padding-left: 10px;
+}
+
+#tweet-handle {
+  color: grey;
+  float: right;
 }
 
 .tweet-content {
@@ -40,18 +51,4 @@ footer.tweet-footer {
 
 .tweet-icons:hover {
   color: yellow;
-}
-
-#tweet-name {
-  color: black;
-}
-
-#tweet-avatar {
-  width: 40px;
-  height: 40px;
-}
-
-#tweet-handle {
-  color: black;
-  opacity: 0.3;
 }

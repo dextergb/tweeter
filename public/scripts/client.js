@@ -60,11 +60,10 @@ $(document).ready(function () {
 
   const createTweetElement = function (tweet) {
     let $tweet = $(`<article class="tweet-container">
-    <header class="tweet-header">
-      <span id="tweet-name"><img id= "tweet-avatar" src="${
-        tweet.user.avatars
-      }" /> ${tweet.user.name}</span>
-      <span id="tweet-handle">${tweet.user.handle}</span>
+    <header>
+    <span><img id= "tweet-avatar" src="${tweet.user.avatars}"/></span>
+    <span id="tweet-name">${tweet.user.name}</span>
+    <span id="tweet-handle">${tweet.user.handle}</span>
     </header>
     <p class="tweet-content">${tweet.content.text}</p>
     <footer class="tweet-footer">
