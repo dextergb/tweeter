@@ -10,7 +10,6 @@ $(document).ready(function () {
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     const value = $("#tweet-text").val();
-    console.log("length", value.length);
 
     // Validation
     if (value.trim().length > 140) {

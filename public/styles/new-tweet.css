@@ -29,6 +29,10 @@
   background-color: #4056a1;
 }
 
+#tweet-button:hover {
+  background: blue;
+}
+
 .counter {
   font-family: "Bungee", sans-serif;
   font-size: 15pt;
