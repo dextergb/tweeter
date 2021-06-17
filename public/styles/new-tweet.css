@@ -36,6 +36,7 @@
   font-family: "Bungee", sans-serif;
   font-size: 15pt;
   float: right;
+  color: black;
 }
 
 .error-message {

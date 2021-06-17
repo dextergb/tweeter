@@ -32,7 +32,7 @@ $(document).ready(function () {
     } else {
       $(".error-element").remove(".error-element");
     }
-
+    // Ajax post request
     $.ajax({
       method: "POST",
       url: "http://localhost:8080/tweets",

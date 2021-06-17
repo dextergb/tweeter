@@ -16,11 +16,10 @@ $(document).ready(function () {
       height = self.height(),
       top = self.scrollTop();
 
-    if (top > height) {
-      if (!button.is(":visible")) {
-        button.show();
-      }
-    } else {
+    if (!button.is(":visible")) {
+      button.show();
+    }
+    if (top === 0) {
       button.hide();
     }
   });
