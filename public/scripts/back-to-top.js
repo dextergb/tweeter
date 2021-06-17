@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const button = $(".back-to-top");
-
+  // Back to top on click
   button.on("click", function (event) {
     $("html, body").animate(
       {
@@ -11,6 +11,7 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
+  // Appears on scroll
   $(window).on("scroll", function () {
     const self = $(this),
       top = self.scrollTop();
@@ -18,6 +19,7 @@ $(document).ready(function () {
     if (!button.is(":visible")) {
       button.show();
     }
+    // Hidden at top of page
     if (top === 0) {
       button.hide();
     }

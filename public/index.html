@@ -87,15 +87,19 @@
     <main class="container">
       <section class="new-tweet">
         <section class="error-message"></section>
+        <!-- User input tweet form -->
         <form class="tweet-form">
           <textarea
             name="text"
             id="tweet-text"
             placeholder="What are you humming about?"
           ></textarea>
+          <!-- Submit tweet -->
           <button id="tweet-button" type="submit">TWEET</button>
+          <!-- Count characters of tweet -->
           <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
+        <!-- Render tweet -->
         <section class="tweet-section"></section>
       </section>
     </main>

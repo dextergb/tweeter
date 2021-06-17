@@ -4,15 +4,16 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// A page can't be manipulated safely until the document is "ready."
 $(document).ready(function () {
+  /* ----------Tweet form initially hidden----------*/
   $(".tweet-form").hide();
-  // Form submission using JQuery
+
+  /* ----------Form submission using JQuery----------*/
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     const value = $("#tweet-text").val();
 
-    // Validation
+    /* ----------Validate tweet before posting----------*/
     $(".error-message").empty();
 
     if (value.trim().length > 140) {
@@ -33,7 +34,7 @@ $(document).ready(function () {
     } else {
       $(".error-message").slideUp(".error-message");
     }
-    // Ajax post request
+    /* ----------Ajax POST request----------*/
     $.ajax({
       method: "POST",
       url: "http://localhost:8080/tweets",
@@ -50,6 +51,7 @@ $(document).ready(function () {
       .fail((error) => console.log("Failed", error));
   });
 
+  /* ----------Ajax GET request----------*/
   const loadTweets = function () {
     $.ajax({
       method: "GET",
@@ -61,6 +63,7 @@ $(document).ready(function () {
 
   loadTweets();
 
+  /* ----------Render tweets function----------*/
   const renderTweets = function (tweets) {
     $(".tweet-section").empty();
     for (let tweet in tweets) {
@@ -68,6 +71,7 @@ $(document).ready(function () {
     }
   };
 
+  /* ----------Create tweet element function----------*/
   const createTweetElement = function (tweet) {
     let $tweet = $(`<article class="tweet-container">
     <header>
@@ -89,7 +93,7 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  // Prevent XSS attacks
+  /* ----------Prevent XSS Attacks----------*/
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
