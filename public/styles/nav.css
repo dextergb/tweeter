@@ -17,6 +17,7 @@ body {
 
 .write-tweet:hover {
   color: black;
+  cursor: pointer;
 }
 
 .title {
@@ -30,7 +31,7 @@ body {
   align-items: center;
 }
 
-#arrow {
+#arrow-down {
   color: red;
   margin-top: 8px;
   display: inline-block;

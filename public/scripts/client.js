@@ -6,6 +6,7 @@
 
 // A page can't be manipulated safely until the document is "ready."
 $(document).ready(function () {
+  $(".tweet-form").hide();
   // Form submission using JQuery
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();

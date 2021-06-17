@@ -13,7 +13,6 @@ $(document).ready(function () {
 
   $(window).on("scroll", function () {
     const self = $(this),
-      height = self.height(),
       top = self.scrollTop();
 
     if (!button.is(":visible")) {
