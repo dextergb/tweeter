@@ -37,6 +37,7 @@
   color: black;
   padding-bottom: 10px;
   font-weight: bold;
+  word-break: break-all;
 }
 
 footer.tweet-footer {
