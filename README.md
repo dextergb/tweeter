@@ -1,8 +1,24 @@
-# Tweeter Project
+# Tweeter Project by Dexter GB
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This repository is built from the starter code provided by Lighthouse Labs. The goal is to build upon it and to practice HTML, CSS, JS, jQuery and AJAX front-end skills, as well as Node, Express and MongoDB back-end skills.
+
+## Skills on Display
+
+Front-end:
+
+- HTML
+- CSS
+- JS
+- jQuery
+- AJAX
+
+Back-end:
+
+- Node
+- Express
+- MongoDB
 
 ## Getting Started
 
