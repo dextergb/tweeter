@@ -6,7 +6,7 @@ Tweeter is a simple, single-page Twitter clone.
 - Communicates with a server via AJAX
 
 !["GIF of Basic Functionality"](https://github.com/dextergb/tweeter/blob/master/docs/functionality.gif?raw=true)
-!["Screenshot of tablet view"](https://github.com/dextergb/tweeter/blob/master/docs/Tablet-view.png?raw=true)
+!["Screenshot of tablet view"](https://github.com/dextergb/tweeter/blob/master/docs/tablet-view2.png?raw=true)
 
 ## Skills on Display
 
